@@ -1,7 +1,7 @@
 #include "main.h"
 
 int check_pal(char *r, int i, int len);
-int_strlen_recursion(char *r);
+int _strlen_recursion(char *r);
 
 /**
   * is_palindrome - CHECKS if String is PALINDROME
@@ -22,7 +22,7 @@ int is_palindrome(char *r)
   *
   * Return: Length of string
   */
-int_strlen_recursion(char *r)
+int _strlen_recursion(char *r)
 {
 	if (*r == '\0')
 		return (0);
