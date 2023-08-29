@@ -13,6 +13,7 @@ int main(void)
 	list_t *head;
 	list_t *new;
 	list_t hello = {"World", 5, NULL};
+	size_t n;
 
 	head = &hello;
 	new = malloc(sizeof(list_t));
@@ -36,5 +37,4 @@ int main(void)
 
 	free(new);
 	return (0);
-
 }
