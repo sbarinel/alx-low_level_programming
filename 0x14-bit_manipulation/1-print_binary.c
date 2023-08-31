@@ -3,27 +3,26 @@
 /**
  * print_binary - prints the binary equivalent of a decimal number
  * @n: number to print in binary
+ * Description; Function that print binary equivlt of dec number
+ *
  */
 void print_binary(unsigned long int n)
 {
-    int i;
-    int flag = 0;
+	int i, count = 0;
+	unsigned long int current;
 
-    if (n == 0)
-    {
-        _putchar('0');
-        return;
-    }
+	for (i = 63; i >= 0; i--)
+	{
+		current = n >> i;
 
-    for (i = 63; i >= 0; i--)
-    {
-        if ((n >> i) & 1)
-        {
-            _putchar('1');
-            flag = 1;
-        }
-        else if (flag)
-            _putchar('0');
-    }
+		if (current & 1)
+		{
+			_putchar('1');
+			count++;
+		}
+		else if (count)
+			_putchar('0');
+	}
+	if (!count)
+		_putchar('0');
 }
-
